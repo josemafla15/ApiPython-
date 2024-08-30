@@ -40,6 +40,7 @@ class DividirView(APIView):
         if dividir != 0:
             respuesta = Response(dividir, status=status.HTTP_200_OK)
         elif dividir == 0:
+            dividir = "No puedes dividir por 0"
             respuesta = Response(dividir, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
         
        
